@@ -1,16 +1,16 @@
 ## Hi there 👋
 
-<!--
-**elijahcuellar/elijahcuellar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I am a results driven leader and developer with a strong foundation in technology and programming seeking an opportunity to enhance my skills in a productive environment and achieve a higher education.
 
-Here are some ideas to get you started:
+### Links
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- [Credly badges](https://www.credly.com/users/elijah-cuellar/badges)
+- [Microsoft Learn](https://learn.microsoft.com/en-us/users/elijahcuellar/achievements)
+
+### Books
+
+These are interesting books I've read in the last 24 months.
+
+- Container Security (2nd edition) by Liz Rice
+- Understanding Deep Learning by Simon J.D. Prince
+- The Data Lakehouse Revolution by Rajaniesh Kaushikk
