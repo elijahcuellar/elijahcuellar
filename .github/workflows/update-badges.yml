@@ -16,5 +16,5 @@ jobs:
       - name: Update Badges
         uses: pemtajo/badge-readme@main
         with:
-          CREDLY_USER: ${{ github.actor }}
+          CREDLY_USER: elijah-cuellar
           NUMBER_LAST_BADGES: 10
