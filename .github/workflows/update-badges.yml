@@ -28,7 +28,9 @@ jobs:
               per_page: 1,
             });
 
-            const latestCommit = commits.data?.[0];
+            const latestCommit = Array.isArray(commits.data)
+              ? commits.data[0]
+              : null;
             if (!latestCommit) {
               core.setOutput('skip_update', 'false');
               core.info('No README commit history found. Running update.');
@@ -50,11 +52,6 @@ jobs:
                   'Backing off for 1 week.'
                 : 'Backoff window not active. Running update.'
             );
-
-      - name: Backoff active
-        if: steps.inactivity.outputs.skip_update == 'true'
-        run: |
-          echo "Skipping this week's badge update due to inactivity backoff."
 
       - name: Update Badges
         if: steps.inactivity.outputs.skip_update != 'true'
