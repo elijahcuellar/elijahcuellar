@@ -33,12 +33,12 @@ jobs:
           pattern = re.compile(r"(<!--START_SECTION:badges-->\n)(.*?)(\n<!--END_SECTION:badges-->)", re.S)
 
           def format_badges(match):
-            badge_elements = [line.strip() for line in match.group(2).splitlines() if line.strip()]
-            return f"{match.group(1)}{' '.join(badge_elements)}{match.group(3)}"
+              badge_elements = [line.strip() for line in match.group(2).splitlines() if line.strip()]
+              return f"{match.group(1)}{' '.join(badge_elements)}{match.group(3)}"
 
           updated, replacement_count = pattern.subn(format_badges, content, count=1)
           if replacement_count:
-            readme.write_text(updated, encoding="utf-8")
+              readme.write_text(updated, encoding="utf-8")
           PY
 
       - name: Commit README changes
