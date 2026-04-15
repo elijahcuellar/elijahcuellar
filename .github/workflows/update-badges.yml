@@ -13,8 +13,36 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Update Badges
         uses: pemtajo/badge-readme@main
         with:
           CREDLY_USER: elijah-cuellar
           NUMBER_LAST_BADGES: 10
+
+      - name: Keep badges inline in README
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          readme = Path("README.md")
+          content = readme.read_text(encoding="utf-8")
+          pattern = re.compile(r"(<!--START_SECTION:badges-->\n)(.*?)(\n<!--END_SECTION:badges-->)", re.S)
+
+          def format_badges(match):
+            lines = [line.strip() for line in match.group(2).splitlines() if line.strip()]
+            return f"{match.group(1)}{' '.join(lines)}{match.group(3)}"
+
+          updated, replaced = pattern.subn(format_badges, content, count=1)
+          if replaced:
+            readme.write_text(updated, encoding="utf-8")
+          PY
+
+      - name: Commit README changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Updated README with new badges
+          file_pattern: README.md
