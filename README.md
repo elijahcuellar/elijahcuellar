@@ -8,6 +8,7 @@ I am a results driven leader and developer with a strong foundation in technolog
 
 These are interesting books I've read in the last 24 months.
 
+- Hypermedia Systems by Carson Gross, Adam Stepinski, and Deniz Akşimşek
 - Container Security (2nd edition) by Liz Rice
 - Understanding Deep Learning by Simon J.D. Prince
 - The Data Lakehouse Revolution by Rajaniesh Kaushikk
