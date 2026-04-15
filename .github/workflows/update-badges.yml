@@ -48,7 +48,7 @@ jobs:
             core.setOutput('skip_update', skipUpdateOutput);
             core.info(
               shouldSkipThisWeek
-                ? 'No README changes in the last 2 weeks. ' +
+                ? 'README inactive for 2-3 weeks. ' +
                   'Backing off for 1 week.'
                 : 'Backoff window not active. Running update.'
             );
